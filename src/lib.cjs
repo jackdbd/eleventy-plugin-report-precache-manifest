@@ -1,6 +1,6 @@
 const { writeFile } = require('fs/promises')
 const path = require('path')
-// const chalk = require('chalk')
+const chalk = require('chalk')
 const { getManifest } = require('workbox-build/build/get-manifest')
 
 const PREFIX = '[🔎 report precache manifest] '
@@ -29,16 +29,22 @@ const reportPrecacheManifest = async (config) => {
 
   // color functions, just to add a level of indirection, so I can change colors
   // in one place. This could also be useful if I decide to replace chalk.
-  // const cfCss = chalk.blue
-  // const  cfJs = chalk.yellow
-  // const  cfHtml = chalk.white
-  // const  cfImages = chalk.green
-  // const  cfFonts = chalk.red
-  const cfCss = (x) => x
-  const cfJs = (x) => x
-  const cfHtml = (x) => x
-  const cfImages = (x) => x
-  const cfFonts = (x) => x
+  const cfCss = chalk.blue
+  const cfJs = chalk.yellow
+  const cfHtml = chalk.white
+  const cfImages = chalk.green
+  const cfFonts = chalk.red
+  const cfOk = chalk.green
+  const cfWarn = chalk.yellow
+  const cfError = chalk.red
+  // const cfCss = (x) => x
+  // const cfJs = (x) => x
+  // const cfHtml = (x) => x
+  // const cfImages = (x) => x
+  // const cfFonts = (x) => x
+  // const cfOk = (x) => x
+  // const cfWarn = (x) => x
+  // const cfError = (x) => x
 
   try {
     // https://developer.chrome.com/docs/workbox/modules/workbox-build/#getmanifest-mode
@@ -121,13 +127,15 @@ const reportPrecacheManifest = async (config) => {
     const filepath = path.join(eleventyOutputDirectory, reportName)
     try {
       await writeFile(filepath, JSON.stringify(entries, null, 4))
-      console.log(chalk.green(`${PREFIX}✅ wrote ${filepath}`))
+      console.log(cfOk(`${PREFIX}✅ wrote ${filepath}`))
     } catch (err) {
-      console.warn(`${PREFIX}⚠️ could not write ${filepath}`)
+      console.warn(cfWarn(`${PREFIX}⚠️ could not write ${filepath}`))
     }
   } catch (err) {
     console.error(
-      `${PREFIX}⚠️ could not retrieve precache manifest from ${eleventyOutputDirectory}`,
+      cfError(
+        `${PREFIX}⚠️ could not retrieve precache manifest from ${eleventyOutputDirectory}`
+      ),
       err
     )
   }

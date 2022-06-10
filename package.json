@@ -54,6 +54,7 @@
     "test:ci": "jest --config ./config/jest.cjs --rootDir ./ --ci --coverage"
   },
   "dependencies": {
+    "chalk": "^4.1.0",
     "joi": "^17.0.0",
     "workbox-build": "^6.5.3"
   },
