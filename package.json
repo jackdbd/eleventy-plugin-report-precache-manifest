@@ -1,0 +1,70 @@
+{
+  "name": "@jackdbd/eleventy-plugin-report-precache-manifest",
+  "description": "Eleventy plugin that generates a report about your service worker precache manifest after Eleventy has finished building your site",
+  "license": "MIT",
+  "version": "0.0.1",
+  "author": {
+    "name": "Giacomo Debidda",
+    "email": "giacomo@giacomodebidda.com",
+    "url": "https://giacomodebidda.com/"
+  },
+  "homepage": "https://github.com/jackdbd/eleventy-plugin-report-precache-manifest",
+  "keywords": [
+    "11ty",
+    "eleventy",
+    "eleventy-plugin",
+    "precache",
+    "service-worker",
+    "workbox"
+  ],
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jackdbd/eleventy-plugin-report-precache-manifest"
+  },
+  "bugs": {
+    "url": "https://github.com/jackdbd/eleventy-plugin-report-precache-manifest/issues"
+  },
+  "main": "lib/index.cjs",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "prebuild": "npm run clean",
+    "build:docs": "run-s 'docs:doctoc' --print-label",
+    "build:js": "cp -r src lib",
+    "build": "run-s 'build:js' 'build:docs' --print-label",
+    "clean": "rm -rf coverage docs lib",
+    "commitlint": "commitlint --config ./config/commitlint.cjs --to HEAD",
+    "docs:doctoc": "doctoc --github README.md --title '<details><summary>Table of Contents</summary>'",
+    "format": "",
+    "nuke": "npm run clean && rm -rf node_modules package-lock.json",
+    "prepare": "husky install",
+    "precommit": "run-s 'format'",
+    "prepush": "run-s 'commitlint'",
+    "release:dry": "semantic-release --dry-run",
+    "test": "jest --config ./config/jest.cjs --rootDir ./",
+    "test:ci": "jest --config ./config/jest.cjs --rootDir ./ --ci --coverage"
+  },
+  "dependencies": {
+    "joi": "^17.0.0",
+    "workbox-build": "^6.5.3"
+  },
+  "peerDependencies": {
+    "@11ty/eleventy": ">=1.0.0"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.1",
+    "@commitlint/config-conventional": "^17.0.2",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "commitlint": "^17.0.2",
+    "doctoc": "^2.2.0",
+    "husky": "^8.0.1",
+    "jest": "^28.1.0",
+    "npm-run-all": "^4.1.5",
+    "semantic-release": "^19.0.2"
+  }
+}
