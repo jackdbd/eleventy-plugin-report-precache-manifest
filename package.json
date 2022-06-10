@@ -4,6 +4,10 @@
   "license": "MIT",
   "version": "1.0.2",
   "private": false,
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "author": {
     "name": "Giacomo Debidda",
     "email": "giacomo@giacomodebidda.com",
