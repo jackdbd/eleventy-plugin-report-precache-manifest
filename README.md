@@ -1,6 +1,6 @@
 # eleventy-plugin-report-precache-manifest
 
-<!-- TODO: badges here -->
+[![npm version](https://badge.fury.io/js/eleventy-plugin-report-precache-manifest.svg)](https://badge.fury.io/js/eleventy-plugin-report-precache-manifest) ![Snyk Vulnerabilities for npm package](https://img.shields.io/snyk/vulnerabilities/npm/eleventy-plugin-report-precache-manifest) ![ci workflow](https://github.com/jackdbd/eleventy-plugin-report-precache-manifest/actions/workflows/ci.yml/badge.svg) [![codecov](https://codecov.io/gh/jackdbd/eleventy-plugin-report-precache-manifest/branch/main/graph/badge.svg?token=XjuB9ZdY5m)](https://codecov.io/gh/jackdbd/eleventy-plugin-report-precache-manifest) [![CodeFactor](https://www.codefactor.io/repository/github/jackdbd/eleventy-plugin-report-precache-manifest/badge)](https://www.codefactor.io/repository/github/jackdbd/eleventy-plugin-report-precache-manifest) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=jackdbd_eleventy-plugin-report-precache-manifest&metric=alert_status)](https://sonarcloud.io/dashboard?id=jackdbd_eleventy-plugin-report-precache-manifest)
 
 Generate a report about your [service worker precache manifest](https://developer.chrome.com/docs/workbox/modules/workbox-precaching/) after Eleventy has finished building your site.
 
