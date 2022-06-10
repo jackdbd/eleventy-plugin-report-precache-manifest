@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## <small>1.0.4 (2022-06-10)</small>
+
+* fix: use chalk 4 ([48fb6f5](https://github.com/jackdbd/eleventy-plugin-report-precache-manifest/commit/48fb6f5))
+* docs: update badges in README ([e0ac0be](https://github.com/jackdbd/eleventy-plugin-report-precache-manifest/commit/e0ac0be))
+
 ## <small>1.0.3 (2022-06-10)</small>
 
 * fix: add required publishConfig for npm package ([62557fc](https://github.com/jackdbd/eleventy-plugin-report-precache-manifest/commit/62557fc))
