@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## <small>1.0.2 (2022-06-10)</small>
+
+* fix: make the npm package public ([23fb25e](https://github.com/jackdbd/eleventy-plugin-report-precache-manifest/commit/23fb25e))
+
 ## <small>1.0.1 (2022-06-10)</small>
 
 * Merge pull request #1 from jackdbd/badges ([7989b13](https://github.com/jackdbd/eleventy-plugin-report-precache-manifest/commit/7989b13)), closes [#1](https://github.com/jackdbd/eleventy-plugin-report-precache-manifest/issues/1)
