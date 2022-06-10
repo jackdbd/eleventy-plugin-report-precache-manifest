@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## <small>1.0.3 (2022-06-10)</small>
+
+* fix: add required publishConfig for npm package ([62557fc](https://github.com/jackdbd/eleventy-plugin-report-precache-manifest/commit/62557fc))
+
 ## <small>1.0.2 (2022-06-10)</small>
 
 * fix: make the npm package public ([23fb25e](https://github.com/jackdbd/eleventy-plugin-report-precache-manifest/commit/23fb25e))

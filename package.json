@@ -2,7 +2,7 @@
   "name": "@jackdbd/eleventy-plugin-report-precache-manifest",
   "description": "Eleventy plugin that generates a report about your service worker precache manifest after Eleventy has finished building your site",
   "license": "MIT",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": false,
   "publishConfig": {
     "access": "public",
